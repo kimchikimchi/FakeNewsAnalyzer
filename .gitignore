@@ -130,3 +130,6 @@ dmypy.json
 
 # Adding MSFT office artifacts
 ~*
+
+# Adding MacOS Finder artifact
+.DS_Store
