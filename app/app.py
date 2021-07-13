@@ -3,22 +3,25 @@ import flask
 import pickle
 import traceback
 import pandas as pd
+import os
 from flask import Flask, json, request, jsonify, render_template, redirect
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import accuracy_score
 
+# instantiate  Flask app
+app = Flask(__name__)
+
+# Need to dynamically look up absolute path since
+# all relative paths are relative to the working directory
+MODEL_PATH = os.path.join(app.root_path, 'model')
 
 # importing model passive-aggressive-classifier model (PAC)
-with open('model/pac_model.pkl', 'rb') as f:
+with open(f"{MODEL_PATH}/pac_model.pkl", 'rb') as f:
     classifier = pickle.load(f)
 
 # import vectorizer
-with open('model/tfidf_vectorizer.pkl','rb') as f:
+with open(f"{MODEL_PATH}/tfidf_vectorizer.pkl",'rb') as f:
     tfidf_vectorizer = pickle.load(f)
-
-
-# instantiate  Flask app
-app = Flask(__name__)
 
 
 # html routes
