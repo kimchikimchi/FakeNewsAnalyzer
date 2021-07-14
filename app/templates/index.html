@@ -5,11 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link href="./../static/css/styles.css" rel="stylesheet">
     <title>Fake News Analyzer</title>
 </head>
 <body>
-    
+  <div class="main">
+    <div class="topnav px-3">
+      <div class="brand-logo"><img src="./../static/images/logo.png" height="60px"></div>
+      <div class="brand-title mx-3">
+        <h4>Article Analyzer</h4>
+      </div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <h1 class="hero-title">Where Fake News is Unmasked</h1>
+              <div class="subheading">ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit praesentium blanditiis dignissimos rerum saepe aspernatur delectus numquam, aut totam vero, eos, eum atque nobis corrupti beatae accusamus provident illo reprehenderit.</div>
+            </div>
+            <div class="col-8">
+              <div class="content-container card">
+                <div>
+                  <div class="form-group pb-3">
+                    <label for="article-title" class="form-label">Title</label>
+                    <input type="text" name="article-title" class="form-control" id="article-title" placeholder="Article Title">
+                  </div>
+                  <div class="form-group pb-3">
+                    <label for="article-body" class="form-label">Article Body</label>
+                    <textarea id="article-body" class="form-control" rows="5"></textarea>
+                  </div>
+                  <button id="btn-analyze" type="button" class="btn btn-primary w-100">Analyze</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" preserveAspectRatio="none" viewBox="0 0 1680 40" class="position-absolute" style="bottom: -1px;"><path d="M0 40h1680V30S1340 0 840 0 0 30 0 30z" fill="#fff"></path></svg>
+    </div>
+  </div>  
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
