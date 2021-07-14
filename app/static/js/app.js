@@ -44,6 +44,8 @@ $(document).ready(function() {
             body: $("#article-body").val().trim()
         }
     
+        console.log(article);
+
         // API call to ML Article Analyzer
         $.ajax({
             url: "/api/v1.0/analyze",
@@ -52,7 +54,7 @@ $(document).ready(function() {
             dataType: "json"
         }).then(function(data) {
             console.log(data);
-            const result = {};
+            let result = {};
 
             if (data.prediction === "FAKE") {
                 result = {
