@@ -1,0 +1,54 @@
+.main {
+  height: 100%;
+}
+
+.topnav {
+  display: flex; 
+  align-items: center;
+  height: 80px; 
+  background-color: #040d21; 
+  color:#fff; 
+}
+
+.brand-logo {
+  flex: 0 0 auto;
+}
+
+.brand-title {
+  flex: 1 0 auto;
+}
+
+.hero-container {
+  background-color: #040d21;
+  max-height: 800px;
+  min-height: 500px;
+  height: 100%;
+  position: relative;
+}
+
+.hero-content-wrapper {
+  padding-top:50px;
+}
+
+.hero-title {
+  color: #fff;
+}
+
+.subheading {
+  color: lightgray;
+}
+
+.content-container {
+  background-color: lightgray;
+  padding: 20px;
+}
+
+.results-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+.icon>i {
+  font-size: 120px;
+}
