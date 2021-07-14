@@ -34,7 +34,9 @@ def index():
 @app.route("/api/v1.0/analyze", methods=["POST"])
 def invokeAnalyzer():
     try:
-        body = request.get_json()
+        # Assume all objects getting are json objects.
+        body = request.get_json(force=True)
+        # print(body)
         article_title = body["title"]
         article_text = body["body"]
 
