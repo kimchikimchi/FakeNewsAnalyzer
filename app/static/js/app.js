@@ -61,14 +61,14 @@ $(document).ready(function() {
                     icon: "fa-angry",
                     color: "red",
                     title: "QUESTIONABLE",
-                    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae iure impedit quibusdam? Officiis tempora commodi odit fuga, aliquam harum aliquid velit sapiente aspernatur saepe magni laboriosam, consequuntur dolor animi dolorum."
+                    description: "Not too sure about this news article. It looks a bit sketchy and probably shouldn't be trusted. Consider digging a little deeper, have a look around and try to find a more reliable source."
                 };
             } else {
                 result = {
                     icon: "fa-smile",
                     color: "green",
                     title: "LIGITIMATE",
-                    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae iure impedit quibusdam? Officiis tempora commodi odit fuga, aliquam harum aliquid velit sapiente aspernatur saepe magni laboriosam, consequuntur dolor animi dolorum."
+                    description: "The news article looks ligitimate. As with anything on the Internet you should check the sources to be on the safe side, but so far we like what we're reading."
                 };
             }
 
