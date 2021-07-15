@@ -43,8 +43,6 @@ $(document).ready(function() {
             title: $("#article-title").val().trim(),
             body: $("#article-body").val().trim()
         }
-    
-        console.log(article);
 
         // API call to ML Article Analyzer
         $.ajax({
