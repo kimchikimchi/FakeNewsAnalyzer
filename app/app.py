@@ -38,10 +38,7 @@ def invokeAnalyzer():
         body = request.get_json(force=True)
         # print(body)
         article_title = body["title"]
-        article_text = body["body"]
-
-        # Constructing a fake Series
-        # text = pd.Series(['a day after the candidates squared off in a fiery debate, they came to columbia, south carolina, and largely agreed that while kings impact can still be felt today, work still needs to be done to guarantee racial equality.\n\n"yes, the challenges we face are many, but so are the quiet heroes working in every corner of america today doing their part to make our country a better place," said the former secretary of state. "i for one receive much inspiration from that simple fact."\n\nthere was symbolism in the event organized by the naacp: in front of a statehouse that flew the confederate battle flag until it was taken down last year. all three candidates noted the flag being removed.\n\n"the flag is down but we are still here because that flag was just one piece of something bigger," clinton said. "dr. king died with his work unfinished and it is up to us to see through."\n\nsanders argued that king is not just a historic figure, but someone whose moral compass should guide people today. repeating the phrase "i think if he were here today," sanders argued that if king were alive today"'])
+        article_text = body["body"].lower()
 
         # Vectorizer expects Series as input
         text = pd.Series([article_text])
