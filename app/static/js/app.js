@@ -19,7 +19,7 @@ const tmplAnalyzerForm = () => {
 const tmplAnalyzerResults = (obj) => {
     return `
         <div class="results">
-            <div style="display: flex; align-item: center; margin-bottom: 20px;">
+            <div class="my-4" style="display: flex; align-items: center;">
                 <div class="icon" style="flex: 0 0 auto;">
                     <i class="far ${obj.icon} fa-lg" style="color: ${obj.color}"></i>
                 </div>
@@ -28,7 +28,7 @@ const tmplAnalyzerResults = (obj) => {
                 ${obj.description}
                 </div>
             </div>
-            <button id="btn-back" type="button" class="btn btn-primary w-100">Try Another</button>
+            <button id="btn-back" type="button" class="btn btn-primary w-100 mt-3">Try Another</button>
         </div>
     `;
 };
