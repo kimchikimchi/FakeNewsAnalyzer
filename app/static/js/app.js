@@ -19,7 +19,7 @@ const tmplAnalyzerForm = () => {
 const tmplAnalyzerResults = (obj) => {
     return `
         <div class="results">
-            <div style="display: flex; align-item: center; margin-bottom: 20px;">
+            <div class="my-4" style="display: flex; align-items: center;">
                 <div class="icon" style="flex: 0 0 auto;">
                     <i class="far ${obj.icon} fa-lg" style="color: ${obj.color}"></i>
                 </div>
@@ -28,7 +28,7 @@ const tmplAnalyzerResults = (obj) => {
                 ${obj.description}
                 </div>
             </div>
-            <button id="btn-back" type="button" class="btn btn-primary w-100">Try Another</button>
+            <button id="btn-back" type="button" class="btn btn-primary w-100 mt-3">Try Another</button>
         </div>
     `;
 };
@@ -43,8 +43,6 @@ $(document).ready(function() {
             title: $("#article-title").val().trim(),
             body: $("#article-body").val().trim()
         }
-    
-        console.log(article);
 
         // API call to ML Article Analyzer
         $.ajax({
@@ -61,14 +59,14 @@ $(document).ready(function() {
                     icon: "fa-angry",
                     color: "red",
                     title: "QUESTIONABLE",
-                    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae iure impedit quibusdam? Officiis tempora commodi odit fuga, aliquam harum aliquid velit sapiente aspernatur saepe magni laboriosam, consequuntur dolor animi dolorum."
+                    description: "Not too sure about this news article. It looks a bit sketchy and probably shouldn't be trusted. Consider digging a little deeper, have a look around and try to find a more reliable source."
                 };
             } else {
                 result = {
                     icon: "fa-smile",
                     color: "green",
                     title: "LIGITIMATE",
-                    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae iure impedit quibusdam? Officiis tempora commodi odit fuga, aliquam harum aliquid velit sapiente aspernatur saepe magni laboriosam, consequuntur dolor animi dolorum."
+                    description: "The news article looks ligitimate. As with anything on the Internet you should check the sources to be on the safe side, but so far we like what we're reading."
                 };
             }
 
